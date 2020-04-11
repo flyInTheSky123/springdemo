@@ -1,0 +1,2 @@
+ dao 包里面的CategoryDAO 是属于jpa;
+ mapper/pojo属于mybatis的注解/xml方式。
