@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
+//全局exception 处理
 @ControllerAdvice
 public class GlobalExceptionHandle {
 
