@@ -1,11 +1,14 @@
 package com.person.springdemo.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 //以下是 springboot jap 的注解方式。没有mapper。
 
 
 @Entity   //表明这是一个实体类
 @Table(name = "category_")  //对应的数据库表名
+@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
 public class Category {
 
     @Id     //主键

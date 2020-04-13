@@ -1,0 +1,37 @@
+<!--<%&#45;&#45;-->
+  <!--Created by IntelliJ IDEA.-->
+  <!--User: mac-->
+  <!--Date: 2020-04-13-->
+  <!--Time: 10:57-->
+  <!--To change this template use File | Settings | File Templates.-->
+<!--&#45;&#45;%>-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用AJAX以JSON方式获取数据</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<input type="button" value="通过AJAX获取多个分类对象" id="sender">
+
+<div id="messageDiv"></div>
+
+<script>
+    $('#sender').click(function(){
+        var url="category?start=0&size=100";
+        $.get(
+            url,
+            function(data) {
+                var categorys = data;
+                for(i in categorys){
+                    var old = $("#messageDiv").html();
+                    var category = categorys[i];
+                    $("#messageDiv").html(old + "<br>"+category.id+"   -----   "+category.name);
+                }
+            });
+    });
+</script>
+</body>
+
+</body>
+</html>
