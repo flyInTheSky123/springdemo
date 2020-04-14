@@ -12,7 +12,6 @@ public interface CategoryDAO extends JpaRepository<Category,Integer> {
 
     //通过name 查询
     public List<Category> findByName(String name);
-
     //模糊查询和id要大于指定数量
     public List<Category> findByNameLikeAndIdGreaterThanOrderByNameAsc(String name, int id);
 

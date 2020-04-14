@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity   //表明这是一个实体类
 @Table(name = "category_")  //对应的数据库表名
-@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+//@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
 public class Category {
 
     @Id     //主键

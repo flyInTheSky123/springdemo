@@ -24,8 +24,8 @@ public class CategoryController {
 
     //Jpa 注解方式
     // <jpa>
-    @Autowired
-    CategoryDAO categoryDAO;
+    //@Autowired
+   // CategoryDAO categoryDAO;
 
     /**
      * @RequestMapping("/listCategory") //参数page 的satrt ，size长度
